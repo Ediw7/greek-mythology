@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "GREEK MYTHOLOGY",
-    "slug": "GREEK MYTHOLOGY",
+    "name": "GREEK-MYTHOLOGY",
+    "slug": "GREEK-MYTHOLOGY",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/zeus.jpg",
