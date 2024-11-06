@@ -9,7 +9,8 @@ import ProfileScreen from '../screens/ProfileScreen';
 import GodDetailScreen from '../screens/GodDetailScreen';
 import TopScreen from '../screens/TopScreen';
 import LoginScreen from '../screens/LoginScreen';
-import GameScreen from '../screens/GameScreen'; // Import GameScreen
+import GameScreen from '../screens/GameScreen';
+import SplashScreen from '../screens/SplashScreen'; // Import SplashScreen
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -27,7 +28,7 @@ const TabNavigator = () => {
           } else if (route.name === 'Profile') {
             iconName = 'person-outline';
           } else if (route.name === 'Game') {
-            iconName = 'game-controller-outline'; // Ikon untuk Game
+            iconName = 'game-controller-outline';
           }
           return <Icon name={iconName} size={size} color={color} />;
         },
@@ -49,12 +50,11 @@ const TabNavigator = () => {
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="SplashScreen">
+        <Stack.Screen name="SplashScreen" component={SplashScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Tabs" component={TabNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="GodDetail" component={GodDetailScreen} />
-        <Stack.Screen name="Top" component={TopScreen} />
-        <Stack.Screen name="Game" component={GameScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
